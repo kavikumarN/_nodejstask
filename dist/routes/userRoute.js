@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const userController_1 = require("../controllers/userController");
+const fileController_1 = require("../controllers/fileController");
+const multer = require("multer");
+const upload = multer({ dest: "uploads/" });
+const router = (0, express_1.Router)();
+router.get('/user/:id', userController_1.UserController.getAllUsers);
+router.post('/upload', upload.single('file'), fileController_1.FileController.writeFileContent);
+// router.get('/:id', UserController.getUserById);
+exports.default = router;

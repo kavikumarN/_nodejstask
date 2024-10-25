@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "fbf41ea5-4643-44e2-ae22-a5ab1f4dd155",
+		"name": "ChatSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22256459",
+		"_collection_link": "https://bhive-alts-developers.postman.co/workspace/Bhive-Alts~1f5bfcce-0f30-4d35-95f0-5abd1991637e/collection/22256459-fbf41ea5-4643-44e2-ae22-a5ab1f4dd155?action=share&source=collection_link&creator=22256459"
+	},
+	"item": [
+		{
+			"name": "getUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploadFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/Users/bhive-kavi/Documents/rzp-27mcoworkingllp.csv"
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"samplename\",\n    \"email\":\"sampleemail33@gmail.com\",\n    \"password\":\"Pass@1234\",\n    \"user_type\":\"normal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"sampleemail33@gmail.com\",\n    \"password\":\"Pass@1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
